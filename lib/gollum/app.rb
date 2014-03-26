@@ -503,7 +503,7 @@ module Precious
       commit_message = { :message => msg }
       author_parameters = session['gollum.author']
       commit_message.merge! author_parameters unless author_parameters.nil?
-      commit_message
+      commit_message.symbolize_keys
     end
   end
 end
